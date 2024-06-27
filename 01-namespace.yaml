@@ -1,7 +1,7 @@
-kind: namespace
-apiVersion: V1
+kind: Namespace
+apiVersion: v1
 metadata:
   name: expense
-  labels: 
+  labels:
     name: expense
-    environement: dev
+    environment: dev
