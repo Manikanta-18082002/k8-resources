@@ -25,4 +25,4 @@ spec: # Not part of metadata
     spec: # Part of metadata
       containers:
       - name: nginx
-        image: nginx:stable-perl
+        image: nginx
