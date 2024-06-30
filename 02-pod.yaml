@@ -8,3 +8,5 @@ spec:
     image: nginx
     # ports: # Without also by default runs on port 80
     # - containerPort:80
+
+#  We didn't given any namespace --> running in default namespace
