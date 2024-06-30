@@ -8,7 +8,10 @@ spec:
     image: nginx
     envFrom:
     - confifMapRef:
-      name: daws78s
+        name: daws78s # This fetches all values inside ConfigMap
+
+    # OR (Below is lot of code)
+
     # env:
     # - name: course # Taking value from ConfigMap (08-...)
     #   valueFrom:
