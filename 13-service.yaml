@@ -1,14 +1,14 @@
-kind: Pod
 apiVersion: v1
+kind: Service
 metadata:
   name: nginx
-spec: 
+spec:
   selector:
-    name: service-test
+    name: frontend
     project: expense
     component: frontend
     environment: dev
   ports:
   - protocol: TCP
     port: 80 # Service - Port
-    targetport: 80 # Target - Port
+    targetPort: 80 #Target - Port
