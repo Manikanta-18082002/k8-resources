@@ -5,7 +5,7 @@ metadata:
 spec:
   containers:
   - name: nginx
-    image: nginx:stable-perl
+    image: nginx:stable-otel
     # ports: # Without also by default runs on port 80
     # - containerPort:80
 
