@@ -7,7 +7,7 @@ spec:
   - name: nginx
     image: nginx
     envFrom:
-    - confifMapRef:
+    - configMapRef:
         name: daws78s # This fetches all values inside ConfigMap
 
     # OR (Below is lot of code)
