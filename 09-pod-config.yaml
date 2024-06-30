@@ -6,14 +6,17 @@ spec:
   containers:
   - name: nginx
     image: nginx
-    env:
-    - name: course # Taking value from ConfigMap (08-...)
-      valueFrom:
-        configMapKeyRef:
-          name: daws78s
-          key: course
-    - name: trainer
-      valueFrom:
-        configMapKeyRef:
-          name: daws78s
-          key: trainer
+    envFrom:
+    - confifMapRef:
+      name: daws78s
+    # env:
+    # - name: course # Taking value from ConfigMap (08-...)
+    #   valueFrom:
+    #     configMapKeyRef:
+    #       name: daws78s
+    #       key: course
+    # - name: trainer
+    #   valueFrom:
+    #     configMapKeyRef:
+    #       name: daws78s
+    #       key: trainer
