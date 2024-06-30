@@ -1,0 +1,13 @@
+kind: Pod
+apiVersion: v1
+metadata:
+  name: env-test
+spec:
+  containers:
+  - name: nginx
+    image: nginx
+    env: # This should be inside container (Means --> setting env to the container)
+    - name: course
+      value: 'kubernetes'
+    - name: duration
+      value: '20hrs'
