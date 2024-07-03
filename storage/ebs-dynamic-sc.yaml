@@ -1,7 +1,8 @@
+# Administrator Task
 apiVersion: storage.k8s.io/v1
 kind: StorageClass
 metadata:
-  name: expense-ebs
-reclaimPolicy: Retain
+  name: expense-ebs # Admin created 1 storage class (expense-ebs) --> This can be used any where
+reclaimPolicy: Retain # If pod delete , PV , outside vol will be there
 provisioner: ebs.csi.aws.com
 volumeBindingMode: WaitForFirstConsumer
