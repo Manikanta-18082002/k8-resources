@@ -7,4 +7,8 @@ parameters:
   provisioningMode: efs-ap
   fileSystemId: fs-014b22578cc380657
   directoryPerms: "700"
-  basePath: "/expense" # Administrator will create 1 folder 
+  basePath: "/expense" # Administrator will create 1 folder and other folder (/robshop,  /payments)
+
+  # alias k='kubectl'
+  # alias ka='kubectl apply -f'
+  # alias kd='kubectl delete -f'
