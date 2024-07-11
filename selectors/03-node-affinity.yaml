@@ -5,8 +5,7 @@ metadata:
 spec:
   affinity:
     nodeAffinity:
-      # preferredDuringSchedulingIgnoredDuringExecution:
-      requiredDuringSchedulingIgnoredDuringExecution:
+      preferredDuringSchedulingIgnoredDuringExecution:
       - weight: 1
         preference:
           matchExpressions:
