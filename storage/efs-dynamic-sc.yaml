@@ -12,3 +12,48 @@ parameters:
   # alias k='kubectl'
   # alias ka='kubectl apply -f'
   # alias kd='kubectl delete -f'
+
+  # eksctl create cluster --config-file=eks.yaml
+  # eksctl delete cluster --config-file=eks.yaml
+
+#   ---------  install_kubectx_kubens_linux.txt   -----------------
+# sudo git clone https://github.com/ahmetb/kubectx /opt/kubectx
+# sudo ln -s /opt/kubectx/kubectx /usr/local/bin/kubectx
+# sudo ln -s /opt/kubectx/kubens /usr/local/bin/kubens
+# echo "source /opt/kubectx/completion/kubectx.bash" >> ~/.bashrc
+# echo "source /opt/kubectx/completion/kubens.bash" >> ~/.bashrc
+
+# eksctl utils associate-iam-oidc-provider \
+#     --region us-east-1 \
+#     --cluster expense-1 \
+#     --approve
+
+
+# eksctl create iamserviceaccount \
+# --cluster=expense-1 \
+# --namespace=kube-system \
+# --name=aws-load-balancer-controller \
+# --attach-policy-arn=arn:aws:iam::654654190418:policy/AWSLoadBalancerControllerIAMPolicy \
+# --override-existing-serviceaccounts \
+# --region us-east-1 \
+# --approve
+
+
+
+
+  # 120  11/07/24 07:54:34 eksctl utils associate-iam-oidc-provider     --region us-east-1     --cluster expense-1     --approve
+  # 121  11/07/24 07:57:16 curl -o iam-policy.json https://raw.githubusercontent.com/kubernetes-sigs/aws-load-balancer-controller/v2.4.7/docs/install/iam_policy_us-gov.json
+  # 122  11/07/24 07:57:51 ll
+  # 123  11/07/24 07:57:59 rm -rf iam-policy.json
+  # 124  11/07/24 07:58:18 curl -o iam-policy.json https://raw.githubusercontent.com/kubernetes-sigs/aws-load-balancer-controller/v2.4.7/docs/install/iam_policy.json
+  # 125  11/07/24 07:58:34 cat iam-policy.json
+  # 126  11/07/24 07:58:49 aws iam create-policy     --policy-name AWSLoadBalancerControllerIAMPolicy     --policy-document file://iam-policy.json
+  # 127  11/07/24 08:00:36 eksctl create iamserviceaccount --cluster=expense-1 --namespace=kube-system --name=aws-load-balancer-controller --attach-policy-arn=arn:aws:iam::654654190418:policy/AWSLoadBalancerControllerIAMPolicy --override-existing-serviceaccounts --region us-east-1 --approve
+  # 128  11/07/24 08:09:57 helm repo add eks https://aws.github.io/eks-charts
+  # 129  11/07/24 08:11:06 curl -fsSL -o get_helm.sh https://raw.githubusercontent.com/helm/helm/main/scripts/get-helm-3
+  # 130  11/07/24 08:11:11 chmod 700 get_helm.sh
+  # 131  11/07/24 08:11:15 ./get_helm.sh
+  # 132  11/07/24 08:11:22 helm repo add eks https://aws.github.io/eks-charts
+  # 133  11/07/24 08:12:10 helm install aws-load-balancer-controller eks/aws-load-balancer-controller -n kube-system --set clusterName=expense-1 --set serviceAccount.create=false --set serviceAccount.name=aws-load-balancer-controller
+  # 134  11/07/24 08:12:30 k get pods -n kube-system
+  # 135  11/07/24 08:12:48 history
